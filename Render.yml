@@ -21,4 +21,4 @@ services:
       - key: APP_KEYS
         generateValue: true
       - key: DATABASE_CLIENT
-        value: better-sqlite3
+        value: sqlite
