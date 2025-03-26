@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: strapi
+    env: node
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
+    healthCheckPath: /_health
+    disk:
+      name: sqlite-data
+      mountPath: /opt/render/project/src/.tmp
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 18.0.0
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
+      - key: APP_KEYS
+        generateValue: true
+      - key: DATABASE_CLIENT
+        value: better-sqlite3
