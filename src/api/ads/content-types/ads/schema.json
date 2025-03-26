@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "adses",
+  "info": {
+    "singularName": "ads",
+    "pluralName": "adses",
+    "displayName": "Ads"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
