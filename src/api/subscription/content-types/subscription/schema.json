@@ -4,22 +4,26 @@
   "info": {
     "singularName": "subscription",
     "pluralName": "subscriptions",
-    "displayName": "Subscription"
+    "displayName": "Subscription",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "email": {
-      "type": "email"
-    },
-    "birthday": {
-      "type": "date"
-    },
     "phone": {
       "type": "string"
     },
     "postcode": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "string"
+    },
+    "email": {
       "type": "string"
     }
   }
