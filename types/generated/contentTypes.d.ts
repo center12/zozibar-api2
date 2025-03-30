@@ -547,6 +547,7 @@ export interface ApiSubscriptionSubscription
   extends Struct.CollectionTypeSchema {
   collectionName: 'subscriptions';
   info: {
+    description: '';
     displayName: 'Subscription';
     pluralName: 'subscriptions';
     singularName: 'subscription';
@@ -555,17 +556,18 @@ export interface ApiSubscriptionSubscription
     draftAndPublish: true;
   };
   attributes: {
-    birthday: Schema.Attribute.Date;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    email: Schema.Attribute.Email;
+    dob: Schema.Attribute.String;
+    email: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::subscription.subscription'
     > &
       Schema.Attribute.Private;
+    name: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     postcode: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
