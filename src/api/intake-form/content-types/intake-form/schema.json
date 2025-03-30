@@ -1,0 +1,98 @@
+{
+  "kind": "collectionType",
+  "collectionName": "intake_forms",
+  "info": {
+    "singularName": "intake-form",
+    "pluralName": "intake-forms",
+    "displayName": "INTAKE FORM"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "howDidYouHearAboutUs": {
+      "type": "string"
+    },
+    "emergencyContact": {
+      "type": "string"
+    },
+    "emergencyContactPhone": {
+      "type": "string"
+    },
+    "lastManicure": {
+      "type": "string"
+    },
+    "manicureFrequency": {
+      "type": "string"
+    },
+    "handFootNailProducts": {
+      "type": "string"
+    },
+    "nailPolishLasts": {
+      "type": "string"
+    },
+    "improveHandsFeetNails": {
+      "type": "string"
+    },
+    "hobbiesActivities": {
+      "type": "string"
+    },
+    "nailConditions": {
+      "type": "string"
+    },
+    "cuticles": {
+      "type": "string"
+    },
+    "handConditions": {
+      "type": "string"
+    },
+    "biteNails": {
+      "type": "string"
+    },
+    "nailInfection": {
+      "type": "string"
+    },
+    "nailInfectionInfo": {
+      "type": "string"
+    },
+    "healthConditions": {
+      "type": "string"
+    },
+    "healthConditionsInfo": {
+      "type": "string"
+    },
+    "pregnant": {
+      "type": "string"
+    },
+    "allergies": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "printName": {
+      "type": "string"
+    }
+  }
+}

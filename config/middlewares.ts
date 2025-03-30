@@ -2,7 +2,15 @@ export default [
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: ['https://www.zozinailbar.co.uk', 'https://zozinailbar.co.uk', 'http://localhost:3000'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE'],
+      credentials: true,
+    }
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',

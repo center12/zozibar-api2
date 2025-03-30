@@ -455,6 +455,61 @@ export interface ApiDrinkDrink extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiIntakeFormIntakeForm extends Struct.CollectionTypeSchema {
+  collectionName: 'intake_forms';
+  info: {
+    displayName: 'INTAKE FORM';
+    pluralName: 'intake-forms';
+    singularName: 'intake-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    allergies: Schema.Attribute.String;
+    biteNails: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cuticles: Schema.Attribute.String;
+    date: Schema.Attribute.String;
+    dob: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    emergencyContact: Schema.Attribute.String;
+    emergencyContactPhone: Schema.Attribute.String;
+    gender: Schema.Attribute.String;
+    handConditions: Schema.Attribute.String;
+    handFootNailProducts: Schema.Attribute.String;
+    healthConditions: Schema.Attribute.String;
+    healthConditionsInfo: Schema.Attribute.String;
+    hobbiesActivities: Schema.Attribute.String;
+    howDidYouHearAboutUs: Schema.Attribute.String;
+    improveHandsFeetNails: Schema.Attribute.String;
+    lastManicure: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::intake-form.intake-form'
+    > &
+      Schema.Attribute.Private;
+    manicureFrequency: Schema.Attribute.String;
+    nailConditions: Schema.Attribute.String;
+    nailInfection: Schema.Attribute.String;
+    nailInfectionInfo: Schema.Attribute.String;
+    nailPolishLasts: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    pregnant: Schema.Attribute.String;
+    printName: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    signature: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Struct.CollectionTypeSchema {
   collectionName: 'services';
   info: {
@@ -1032,6 +1087,7 @@ declare module '@strapi/strapi' {
       'api::ads.ads': ApiAdsAds;
       'api::category.category': ApiCategoryCategory;
       'api::drink.drink': ApiDrinkDrink;
+      'api::intake-form.intake-form': ApiIntakeFormIntakeForm;
       'api::service.service': ApiServiceService;
       'api::subscription.subscription': ApiSubscriptionSubscription;
       'plugin::content-releases.release': PluginContentReleasesRelease;
